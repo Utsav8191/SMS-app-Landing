@@ -19,7 +19,7 @@ import {
   SmartphoneNfc
 } from 'lucide-react';
 
-import DemoForm from '@/components/DemoForm';
+import WaitlistForm from '@/components/WaitlistForm';
 import DashboardShowcase from '@/components/DashboardShowcase';
 import FAQ from '@/components/FAQ';
 
@@ -144,8 +144,8 @@ export default function Home() {
       description: 'Complete data isolation with end-to-end HTTPS encryption, custom access roles, and continuous security audits.'
     },
     {
-      title: 'Mobile-Optimized Experience',
-      description: 'A responsive layout designed to match desktop capabilities beautifully across tablets, laptops, and mobile screens.'
+      title: 'Web Based',
+      description: 'EdFlow Pro is a web-based platform. That means you can access it from any web browser without need to install anything separate.'
     }
   ];
 
@@ -191,6 +191,10 @@ export default function Home() {
             <a href="#features" className="text-on-surface-variant hover:text-primary transition-colors">
               Features
             </a>
+            {/* Hiding Pricing temporarily as requested */}
+            {/* <a href="/pricing" className="text-on-surface-variant hover:text-[#1D4ED8] transition-colors">
+              Pricing
+            </a> */}
             <a href="#showcase" className="text-on-surface-variant hover:text-primary transition-colors">
               Live Showcase
             </a>
@@ -201,14 +205,15 @@ export default function Home() {
               FAQ
             </a>
           </div>
-          <div>
+          {/* Hiding Start Free Trial temporarily as requested */}
+          {/* <div>
             <a
-              href="#demo"
+              href="/pricing"
               className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-6 py-2.5 rounded-xl font-bold text-sm transition-all hover:scale-105 shadow-md shadow-primary/20 inline-block"
             >
-              Book Demo
+              Start Free Trial
             </a>
-          </div>
+          </div> */}
         </div>
       </nav>
 
@@ -232,17 +237,24 @@ export default function Home() {
               Seamlessly manage admissions, academics, and fee collection with our cloud-based platform. Built for the next generation of educators and administrators.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="#demo"
+              {/* Hiding Start 30-Day Free Trial and Book a Demo temporarily as requested */}
+              {/* <a
+                href="/pricing"
                 className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-8 py-4 rounded-xl font-bold text-base hover:scale-[1.03] transition-all shadow-lg hover:shadow-primary/30"
               >
-                Book a Free Demo
+                Start 30-Day Free Trial
               </a>
               <a
-                href="#features"
+                href="#demo"
                 className="border-2 border-outline-variant hover:bg-outline-variant/10 text-on-surface-variant px-8 py-4 rounded-xl font-bold text-base transition-all"
               >
-                Explore Features
+                Book a Demo
+              </a> */}
+              <a
+                href="#waitlist"
+                className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-8 py-4 rounded-xl font-bold text-base hover:scale-[1.03] transition-all shadow-lg hover:shadow-primary/30"
+              >
+                Join the Waitlist
               </a>
             </div>
           </motion.div>
@@ -568,8 +580,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Demo Form conversion */}
-      <DemoForm />
+      {/* Hiding Book a Demo Form section temporarily and replacing it with Waitlist Form */}
+      {/* <DemoForm /> */}
+      <WaitlistForm />
 
       {/* FAQ */}
       <FAQ />
@@ -577,23 +590,30 @@ export default function Home() {
       {/* Final CTA Block */}
       <section className="py-24 bg-product-brand text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
-        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10 space-y-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10 space-y-8 font-display">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">Ready to Digitize Your School?</h2>
-          <p className="text-white/80 text-lg md:text-xl max-w-xl mx-auto font-medium leading-relaxed">
-            Join the forward-thinking institutions leading the digital revolution in education. Start your journey with EdFlow Pro today.
+          <p className="text-white/80 text-lg md:text-xl max-w-xl mx-auto font-medium leading-relaxed font-body">
+            Join the forward-thinking institutions leading the digital revolution in education. Sign up for our waitlist today.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <a
-              href="#demo"
+            {/* Hiding Start Free Trial and Book a Demo temporarily */}
+            {/* <a
+              href="/pricing"
               className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-10 py-5 rounded-xl font-bold text-base hover:scale-105 transition-all shadow-xl"
             >
-              Book Free Demo
+              Start Free Trial
             </a>
             <a
               href="#demo"
               className="border border-white/20 hover:bg-white/10 text-white px-10 py-5 rounded-xl font-bold text-base transition-all"
             >
-              Contact Sales
+              Book a Demo
+            </a> */}
+            <a
+              href="#waitlist"
+              className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-10 py-5 rounded-xl font-bold text-base hover:scale-105 transition-all shadow-xl"
+            >
+              Join the Waitlist
             </a>
           </div>
         </div>
@@ -615,16 +635,19 @@ export default function Home() {
             <div className="space-y-4">
               <h4 className="font-extrabold text-sm text-on-surface tracking-wider uppercase">Product Links</h4>
               <ul className="space-y-3 text-sm text-on-surface-variant">
+                {/* Hiding Pricing & Plans temporarily */}
+                {/* <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing & Plans</a></li> */}
                 <li><a href="#features" className="hover:text-primary transition-colors">Key Modules</a></li>
                 <li><a href="#showcase" className="hover:text-primary transition-colors">Screen Showcase</a></li>
-                <li><a href="#why-choose-us" className="hover:text-primary transition-colors">Core Differentiators</a></li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="font-extrabold text-sm text-on-surface tracking-wider uppercase">Contact & Help</h4>
               <ul className="space-y-3 text-sm text-on-surface-variant">
                 <li><a href="#faq" className="hover:text-primary transition-colors">Support FAQ</a></li>
-                <li><a href="#demo" className="hover:text-primary transition-colors">Request a Demo</a></li>
+                {/* Hiding Request a Demo temporarily, replacing with Waitlist */}
+                {/* <li><a href="#demo" className="hover:text-primary transition-colors">Request a Demo</a></li> */}
+                <li><a href="#waitlist" className="hover:text-primary transition-colors">Join the Waitlist</a></li>
                 <li><a href="mailto:support@edflowpro.com" className="hover:text-primary transition-colors font-semibold">support@edflowpro.com</a></li>
               </ul>
             </div>
