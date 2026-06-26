@@ -185,7 +185,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center h-full">
           <a href="#" className="font-display font-extrabold text-2xl text-primary tracking-tight">
-            EduFlow Pro
+            Alpine Grow
           </a>
           <div className="hidden md:flex items-center gap-8 font-semibold">
             <a href="#features" className="text-on-surface-variant hover:text-primary transition-colors">
