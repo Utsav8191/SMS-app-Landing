@@ -12,7 +12,7 @@ import 'server-only';
  */
 function getGoogleAuthClient() {
   const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
-  let privateKey = process.env.GOOGLE_PRIVATE_KEY;
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY;
 
   const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
 
