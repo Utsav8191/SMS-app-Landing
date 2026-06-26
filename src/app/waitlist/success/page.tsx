@@ -10,9 +10,9 @@ import { submitWaitlistFeedback } from '@/actions/submitWaitlist';
 function SuccessPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  
+
   const rowNumber = parseInt(searchParams.get('row') || '0', 10);
-  
+
   const [frustration, setFrustration] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
@@ -49,7 +49,7 @@ function SuccessPageContent() {
       <nav className="w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm h-16 flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-20 w-full flex justify-between items-center">
           <Link href="/" className="font-sans font-extrabold text-2xl text-[#1D4ED8] tracking-tight">
-            EduFlow Pro
+            Alpine Grow
           </Link>
         </div>
       </nav>
