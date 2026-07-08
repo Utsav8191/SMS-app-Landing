@@ -16,7 +16,9 @@ import {
   Sparkles,
   Bus,
   UserCheck,
-  SmartphoneNfc
+  SmartphoneNfc,
+  Calendar,
+  Shield
 } from 'lucide-react';
 
 import WaitlistForm from '@/components/WaitlistForm';
@@ -37,50 +39,68 @@ export default function Home() {
 
   const features = [
     {
-      icon: <Sparkles className="w-6 h-6 text-primary" />,
+      icon: <Sparkles className="w-6 h-6" />,
       title: 'AI Command Copilot',
-      description: 'Intelligent, search-driven navigation hub accessible instantly from anywhere in the application.'
+      description: 'Intelligent, search-driven navigation hub accessible instantly from anywhere in the application.',
+      colorClass: 'bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-indigo-600'
     },
     {
-      icon: <Layers className="w-6 h-6 text-primary" />,
+      icon: <Layers className="w-6 h-6" />,
       title: 'Online Admissions',
-      description: 'Digitize the entire enrollment process from dynamic online forms to automated verification and registration fee payouts.'
+      description: 'Digitize the entire enrollment process from dynamic online forms to automated verification and registration fee payouts.',
+      colorClass: 'bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-blue-600'
     },
     {
-      icon: <Users className="w-6 h-6 text-primary" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Student Profiles',
-      description: 'Comprehensive 360-degree view of academic histories, marks, health logs, fee books, and extracurricular performance.'
+      description: 'Comprehensive 360-degree view of academic histories, marks, health logs, fee books, and extracurricular performance.',
+      colorClass: 'bg-sky-50 text-sky-600 group-hover:bg-sky-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-sky-600'
     },
-    // {
-    //   icon: <CheckCircle className="w-6 h-6 text-primary" />,
-    //   title: 'Smart Attendance',
-    //   description: 'Mark attendance via RFID sensors or mobile apps, triggering instant absent updates to parents via SMS and push.'
-    // },
     {
-      icon: <Wallet className="w-6 h-6 text-primary" />,
+      icon: <Wallet className="w-6 h-6" />,
       title: 'Fee Management',
-      description: 'Collect payments online via secure gateways. Auto-schedule due alerts, handle partial payments, and issue receipts.'
+      description: 'Collect payments online via secure gateways. Auto-schedule due alerts, handle partial payments, and issue receipts.',
+      colorClass: 'bg-amber-50 text-amber-600 group-hover:bg-amber-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-amber-600'
     },
     {
-      icon: <MessageSquare className="w-6 h-6 text-primary" />,
+      icon: <MessageSquare className="w-6 h-6" />,
       title: 'Announcements',
-      description: 'Broadcasting tools for circulars, dynamic newsletters, notice board posts, and automated SMS alerts.'
+      description: 'Broadcasting tools for circulars, dynamic newsletters, notice board posts, and automated SMS alerts.',
+      colorClass: 'bg-rose-50 text-rose-600 group-hover:bg-rose-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-rose-600'
     },
     {
-      icon: <UserCheck className="w-6 h-6 text-primary" />,
+      icon: <UserCheck className="w-6 h-6" />,
       title: 'Staff Administration',
-      description: 'Centralize payroll computations, log teacher lesson plans, assign classes, and record leave balances.'
+      description: 'Centralize payroll computations, log teacher lesson plans, assign classes, and record leave balances.',
+      colorClass: 'bg-violet-50 text-violet-600 group-hover:bg-violet-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-violet-600'
     },
-    // {
-    //   icon: <SmartphoneNfc className="w-6 h-6 text-primary" />,
-    //   title: 'Parent Portal',
-    //   description: 'Ensure absolute transparency. Empower parents with real-time fee books, homework diaries, and instant report cards.'
-    // },
-    // {
-    //   icon: <Smartphone className="w-6 h-6 text-primary" />,
-    //   title: 'Dedicated Mobile Apps',
-    //   description: 'Beautiful, native iOS and Android applications designed individually for school administrators, teachers, and parents.'
-    // }
+    {
+      icon: <Smartphone className="w-6 h-6" />,
+      title: 'Teachers Portal',
+      description: 'Smart, optimized PWA application for teachers with offline capabilities for seamless workflow.',
+      colorClass: 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-emerald-600'
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: 'Daily Attendance & Calendar',
+      description: 'Robust daily student attendance tracking and comprehensive academic calendar management.',
+      colorClass: 'bg-fuchsia-50 text-fuchsia-600 group-hover:bg-fuchsia-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-fuchsia-600'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'UDISE+ Compliant',
+      description: 'Fully compliant with national school reporting frameworks, ensuring audit readiness and reports generation.',
+      colorClass: 'bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-teal-600'
+    }
   ];
 
   const problemSolutions = [
@@ -146,6 +166,18 @@ export default function Home() {
     {
       title: 'Web Based',
       description: 'EdFlow Pro is a web-based platform. That means you can access it from any web browser without need to install anything separate.'
+    },
+    {
+      title: 'PWA Teachers Portal',
+      description: 'Simple, lightweight PWA teachers portal with offline capabilities for seamless classroom workflow.'
+    },
+    {
+      title: 'UDISE+ Compliant',
+      description: 'Fully compliant with national school reporting standards for seamless annual statistics and auditing.'
+    },
+    {
+      title: 'Staff Payroll Management',
+      description: 'Easy staff salary management and payslip generation integrated directly into school operations.'
     }
   ];
 
@@ -160,7 +192,7 @@ export default function Home() {
       icon: <MessageSquare className="w-8 h-8 text-primary" />,
       value: '90% Increase',
       title: 'Parent Engagement',
-      description: 'Provide instant portal notifications and reminders, directly into parents Whatsapp & Email.'
+      description: 'Provide instant notifications and reminders, directly into parents Whatsapp & Email.'
     },
     {
       icon: <Layers className="w-8 h-8 text-primary" />,
@@ -287,7 +319,7 @@ export default function Home() {
               </div>
 
               {/* Floating Glass Card 2 */}
-              <div className="absolute top-1/3 -right-8 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '2s' }}>
+              <div className="absolute top-1/4 -right-8 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold">
                     <Wallet className="w-5 h-5" />
@@ -300,7 +332,7 @@ export default function Home() {
               </div>
 
               {/* Floating Glass Card 3 */}
-              <div className="absolute -bottom-4 left-1/6 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '4s' }}>
+              <div className="absolute -bottom-4 left-1/4 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '4s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#7f2500]/10 flex items-center justify-center text-[#7f2500]">
                     <Sparkles className="w-5 h-5" />
@@ -308,6 +340,18 @@ export default function Home() {
                   <div className="text-left">
                     <p className="text-xs font-extrabold text-on-surface">AI Command Center</p>
                     <p className="text-[10px] text-on-surface-variant">Available 24/7</p>
+                  </div>
+                </div>
+              </div>
+              {/* Floating Glass Card 4 */}
+              <div className="absolute top-2/3 -right-8 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '1.5s' }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                    <Smartphone className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-xs font-extrabold text-on-surface">Teachers Portal</p>
+                    <p className="text-[10px] text-on-surface-variant">Offline capabilities</p>
                   </div>
                 </div>
               </div>
@@ -404,10 +448,10 @@ export default function Home() {
                 key={idx}
                 className="p-8 bg-background rounded-3xl border border-gray-100 hover:border-primary/20 hover:shadow-xl hover:-translate-y-1.5 transition-all group duration-300"
               >
-                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${feature.colorClass}`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-on-surface mb-3 group-hover:text-primary transition-colors">
+                <h3 className={`text-lg md:text-xl font-bold text-on-surface mb-3 transition-colors ${feature.titleColorClass || 'group-hover:text-primary'}`}>
                   {feature.title}
                 </h3>
                 <p className="text-on-surface-variant text-sm leading-relaxed">
