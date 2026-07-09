@@ -67,7 +67,7 @@ export default function WaitlistForm() {
             JOIN THE WAITLIST
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-            Be the First to Experience EduFlow Pro
+            Be the First to Experience Alpine grow
           </h2>
           <p className="mt-4 text-on-surface-variant max-w-xl mx-auto text-base">
             We are rolling out priority access in batches. Submit your details below to secure your spot in line.

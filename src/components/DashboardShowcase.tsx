@@ -13,19 +13,19 @@ export default function DashboardShowcase() {
       title: '360° Student Information Management',
       description: 'Centralized profiles capturing academic history, enrollment files, attendance tracking, grades, parent contact info, and medical logs in one premium, easy-to-use interface.',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqNjnwdXfH_FaizDXUbzMDRxdW-y5dU-bvLyU4JnrMyUx0ZSpdenzy2ynuZILAX1xUjd9OAfaW54cdgXviiIK55mT7jC-X3X9mTY7EmBf54t5KUlKNw47qkJiY-Mjg52h-EAnum8jlyvLG6rUGNf32F8KhH2gcbxCF1q_Z66t8llVNDls_yGlrVi6ZkLLPD3HOgB_m2L_H-QVD8nXoUzFZ3GmvwnJkD1axIRwa9Ob63a46F0gfEfFq9pbKpkoJt1U7W7Iq6Laq04sm',
-      alt: 'Clean and comprehensive Student Profile view in EdFlow Pro'
+      alt: 'Clean and comprehensive Student Profile view in Alpine grow'
     },
     attendance: {
       title: 'Smart Attendance Tracking & Absentees Alert',
       description: 'Real-time classroom rolls, smart RFID card integrations, and automated notifications that instantly alert parents via SMS and email when a student is absent.',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuALApgugwEdirxOEfYkZy2DOjtRVSpgeS-txT7bZqpo15NCpO-xBA-y2MboB8VRa9tpyWSAxOaleN0bUlvinCgWKsRsf5h9cQJxkL-fb2h4Qv9FchgyQyWmMKnCxe0ZlX7y9MPE6k9aqjCqJw_uL06z-yj407ipAyruXktbaabZw7ll3N9gXr7yGs8qCSHG3NL6j0EmoNUgRjkQb1iui9By2SrrJqCllOGxYWqjKxZyPzr-7rc_ubqyieJZMxNtR7x1F9p06i9FRb_z',
-      alt: 'Analytical and dynamic attendance tracking heatmap dashboard in EdFlow Pro'
+      alt: 'Analytical and dynamic attendance tracking heatmap dashboard in Alpine grow'
     },
     fees: {
       title: 'Seamless Digital Fee Collection & Invoicing',
       description: 'Online payment gateways, custom invoice schedules, automated late-payment reminders, partial payments support, and detailed school revenue reports.',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBammKO-zjwbwZDGdEzH8YxbsUOZNAxmI3bUKdiGUzAONtZKvOVldkR-qV1ORbwyCJwveZ38CQD7z2LbtCD5bi9eTxHNogtHBLcAq6dkBZnJ2Htnc1ETrlAxO-7gMTrf6THVImj7fAqPvnA3Ps2ZfA0k5E4lP04_-aMsODeZ6MESQn31vRd2qIx0QY4i8xAb1zjz_RTDlvrwdFQRvcNuC8jLpwE-uwxBTWqpYkFUa8wtU_5Tu181fdySuwtCc0fXJqK2yF3Xcm6DG0Y',
-      alt: 'Financial analytics and transaction registers screen in EdFlow Pro'
+      alt: 'Financial analytics and transaction registers screen in Alpine grow'
     }
   };
 

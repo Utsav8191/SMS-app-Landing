@@ -15,17 +15,20 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: 'EduFlow Pro | Modern School Management System',
+  title: 'Alpine grow | Modern School Management System',
   description: 'Streamline admissions, student information, automated fee payments, Smart RFID attendance, grading systems, and school operations in one premium cloud-based ERP.',
-  keywords: 'school management system, school ERP, student tracking, attendance software, fee management, online admissions, EdFlow Pro, school software',
+  keywords: 'school management system, school ERP, student tracking, attendance software, fee management, online admissions, Alpine grow, school software',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
-    title: 'EduFlow Pro | Modern School Management System',
+    title: 'Alpine grow | Modern School Management System',
     description: 'Simplify institutional administration, increase transparent parent-teacher communications, and secure fee collections.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EduFlow Pro | Modern School Management System',
+    title: 'Alpine grow | Modern School Management System',
     description: 'Transform your school administration with our premium, cloud-based ERP solution.',
   }
 };

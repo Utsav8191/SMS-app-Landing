@@ -172,9 +172,9 @@ function SuccessPageContent() {
         </motion.div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-white border-t border-gray-100 py-6 text-center text-xs text-gray-400 font-medium">
-        <p>© {new Date().getFullYear()} EduFlow Pro. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Alpine grow. All rights reserved.</p>
+        <p className="text-gray-400 text-[10px] mt-1">Made with ❤️ in India</p>
       </footer>
     </div>
   );

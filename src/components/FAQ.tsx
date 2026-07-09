@@ -51,27 +51,27 @@ export default function FAQ() {
   const faqs = [
     {
       question: 'What is the implementation time for the School Management System?',
-      answer: 'Typically, initial setup takes less than a week. We assist with migrating your current student records, fee categories, and staff lists. Standard onboarding, including training sessions for your administrators and teachers, is fully completed within 7 to 10 days.'
+      answer: 'Setup is instant. As soon as you complete the auto-pay configuration, your 30-day free trial begins immediately. Your login credentials will be sent to your email instantly, allowing you to access and start using the application right away.'
     },
     {
       question: 'Is student and administrative data secure on your cloud platform?',
-      answer: 'Yes, data security is our highest priority. We use bank-grade end-to-end encryption protocols, secure socket layers (SSL), and hosting infrastructure with automated real-time backups to ensure that all personal, academic, and financial information remains confidential and secure.'
+      answer: 'Yes, data security is our top priority. All student and administrative records are fully encrypted and transmitted securely. We leverage modern, industry-standard cloud platforms and secure servers with automated real-time backups to ensure your institution\'s data remains safe and confidential at all times.'
     },
     {
       question: 'Are there dedicated mobile applications for parents and teachers?',
-      answer: 'Yes. We provide native mobile applications for iOS and Android tailored specifically for parents to track attendance, fees, homework, and reports, and another app for teachers to record class schedules, marks, and attendance on-the-go.'
+      answer: 'Yes. We provide a special web-based PWA (Progressive Web App) portal for Teachers that is optimized to work even at slow internet speeds and supports offline attendance marking. For parents, we provide native iOS and Android mobile apps to track attendance, fees, homework, and reports.'
     },
     {
       question: 'What type of training and support do you provide during onboarding?',
-      answer: 'We provide extensive, live training sessions for administrators, teachers, and coordinators. In addition, every school is assigned a dedicated support manager available via chat, email, or phone to address any operational queries post-launch.'
+      answer: 'We provide extensive, live training sessions for administrators, teachers, and coordinators. In addition, our support team is easily reachable via chat, email, or phone to address any operational queries post-launch.'
     },
     {
       question: 'Does the system support online fee collection and invoice generation?',
-      answer: 'Yes. The system integrates seamlessly with leading payment gateways, allowing parents to securely pay fees online using credit cards, net banking, UPI, or digital wallets. Invoices are generated automatically, and system reminders alert parents before deadline dates.'
+      answer: 'Currently, fee collections can be manually updated in the system, and various school payment methods can be added. Direct online payment gateway integration will be introduced in future updates. However, invoices are automatically generated, and the specific payment modes (such as Cash, UPI, Cheque, or Bank Transfer) can be updated and tracked for each transaction.'
     },
     {
       question: 'Can the system accommodate multiple school branches or campuses?',
-      answer: 'Absolutely. EdFlow Pro is built to be highly scalable. It supports multi-campus trusts or single-campus schools alike, enabling unified reports, centralized billing, and top-level governance from a single administrative account.'
+      answer: 'Currently, multi-tenant setup for multiple branches or campuses is not supported. However, support for managing multiple campus locations under a unified account is planned for future updates.'
     }
   ];
 
