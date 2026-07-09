@@ -65,7 +65,7 @@ export default function PricingPage() {
         const options = {
           key: response.keyId,
           subscription_id: response.subscriptionId,
-          name: "EduFlow Pro",
+          name: "Alpine grow",
           description: isReturningCustomer
             ? "Annual Enterprise Plan - Immediate Activation"
             : "Annual Enterprise Plan - 30-Day Free Trial",
@@ -120,7 +120,7 @@ export default function PricingPage() {
       <nav className="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm h-16">
         <div className="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center h-full">
           <a href="/" className="font-sans font-extrabold text-2xl text-[#1D4ED8] tracking-tight">
-            EduFlow Pro
+            Alpine grow
           </a>
           <div>
             <a
@@ -323,7 +323,8 @@ export default function PricingPage() {
 
       {/* Pricing Footer */}
       <footer className="bg-white border-t border-gray-100 py-8 text-center text-xs text-gray-500 font-semibold">
-        <p>© {new Date().getFullYear()} EduFlow Pro. Secured billing via Razorpay. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Alpine grow. Secured billing via Razorpay. All rights reserved.</p>
+        <p className="text-gray-400 text-[10px] mt-1">Made with ❤️ in India</p>
       </footer>
     </div>
   );

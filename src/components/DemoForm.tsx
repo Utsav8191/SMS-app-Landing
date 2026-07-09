@@ -91,7 +91,7 @@ export default function DemoForm() {
             Schedule Your Personalized Walkthrough
           </h2>
           <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
-            Discover how EdFlow Pro can digitize daily records, streamline fee collections, and simplify parent engagement for your school.
+            Discover how Alpine grow can digitize daily records, streamline fee collections, and simplify parent engagement for your school.
           </p>
         </div>
 

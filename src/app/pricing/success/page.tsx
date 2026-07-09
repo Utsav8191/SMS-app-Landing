@@ -20,7 +20,7 @@ function SuccessPageContent() {
       <nav className="w-full bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm h-16 flex items-center">
         <div className="max-w-7xl mx-auto px-6 md:px-20 w-full flex justify-between items-center">
           <Link href="/" className="font-sans font-extrabold text-2xl text-[#1D4ED8] tracking-tight">
-            EduFlow Pro
+            Alpine grow
           </Link>
         </div>
       </nav>
@@ -44,7 +44,7 @@ function SuccessPageContent() {
               Subscription Successful!
             </h1>
             <p className="text-gray-500 text-sm leading-relaxed font-semibold">
-              Thank you for subscribing to EduFlow Pro. We have successfully authenticated your e-mandate and initiated your 30-day free trial.
+              Thank you for subscribing to Alpine grow. We have successfully authenticated your e-mandate and initiated your 30-day free trial.
             </p>
           </div>
 
@@ -91,9 +91,9 @@ function SuccessPageContent() {
         </motion.div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-white border-t border-gray-100 py-6 text-center text-xs text-gray-400 font-medium">
-        <p>© {new Date().getFullYear()} EduFlow Pro. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Alpine grow. All rights reserved.</p>
+        <p className="text-gray-400 text-[10px] mt-1">Made with ❤️ in India</p>
       </footer>
     </div>
   );

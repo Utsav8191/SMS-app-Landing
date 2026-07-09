@@ -110,17 +110,17 @@ export default function Home() {
       probDesc: 'Scattered paper registries and outdated Excel files make searching for past records, academic histories, or health logs extremely exhausting for administrative staff.',
       solTitle: 'Centralized Cloud Repository',
       solDesc: 'A secure and structured cloud platform housing everything from online admissions to alumni databases, accessible within a single click from any device.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAZQRO6fJFiyOPSpuX4yBidxgHzazqnSMR4giGseCE8LjL5wmYB116HeWSAmNRvXghfSSlGHjZl8GWZlmImVzRb56n-ZKoSw2NU6TTboxOpt2msJIBYAEv5xu4OU3xjpDaqhvpqFe3eQpaxeSBpYjkbO0gg1CSCuDne0KhbjVi8RF26BAyWFIoSy3pSPetNmNAnUOxKlSzFyQZTfdNlp1oG1gZtbtUG1_KKjcqxfvaQRl8AXoe9Df2VLQGXAPJLacgQxjOXepm6fG68',
+      image: '/assets/File_searching-cuate.png',
       imageAlt: 'Scattered manual paper logs contrast with digital workflows'
     },
     {
       tag: 'ENGAGEMENT',
-      probTitle: 'The Parent-Teacher Communication Gap',
-      probDesc: 'Crucial attendance warnings, exam dates, fee updates, and classroom notices go unnoticed, leading to misunderstandings and delayed responses.',
-      solTitle: 'Real-time Automated Channels',
-      solDesc: 'Instant, transparent notification updates sent straight to parents via WhatsApp or email.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHdpJ0fWl1O_r_Hpw_WBS8e-8duTMyduUv25V3Nvj-IyzJp4cLEJRsf0GXlnEzdB0o3jc7jEjkJvNvv4N5CBNOHEM9DfyOwi3pG7pKe19NRm30D2JLVhjrF8ttK5LRGitPyyguAtltI3vA3MYb9aIrlligF54NCCxKeoE8J-z6FdiweDPAqYNpkpY9lPhuz2hdaP38pjWGBUxMVmCZjrL-uRQiyAF81IOuocJkQ0OoJxu4iAREfssuWWnzoum9iJuVeSnuJ4GbUdzp',
-      imageAlt: 'Busy parents keeping in sync via automated school portal applications'
+      probTitle: 'The School-Parent Communication Gap',
+      probDesc: 'Crucial attendance warnings, fee deadlines, exam dates, and official announcements go unnoticed, leading to misunderstandings and delayed responses.',
+      solTitle: 'Direct WhatsApp & Email Updates',
+      solDesc: 'Connect with parents instantly on the platforms they use every day. Send automated attendance alerts, and circulars directly to their WhatsApp and email inbox.',
+      image: '/assets/parent_communication.png',
+      imageAlt: 'Parents receiving direct updates on their mobile devices'
     },
     {
       tag: 'BLOATED SOFTWARE',
@@ -153,7 +153,7 @@ export default function Home() {
     },
     {
       title: 'Built to Scale',
-      description: 'EdFlow Pro easily scales with your growth, accommodating from 100 students up to 15,000+ multi-campus networks.'
+      description: 'Alpine grow easily scales with your school\'s growth, accommodating from 100 students up to large student bodies.'
     },
     {
       title: 'Dedicated Local Support',
@@ -165,7 +165,7 @@ export default function Home() {
     },
     {
       title: 'Web Based',
-      description: 'EdFlow Pro is a web-based platform. That means you can access it from any web browser without need to install anything separate.'
+      description: 'Alpine grow is a web-based platform. That means you can access it from any web browser without need to install anything separate.'
     },
     {
       title: 'PWA Teachers Portal',
@@ -216,8 +216,45 @@ export default function Home() {
           }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center h-full">
-          <a href="#" className="font-display font-extrabold text-2xl text-primary tracking-tight">
-            Alpine Grow
+          <a href="#" className="font-display font-extrabold text-2xl text-primary tracking-tight flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center p-1 text-primary">
+              <svg
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full"
+              >
+                {/* Sun of knowledge */}
+                <circle cx="50" cy="30" r="10" fill="currentColor" opacity="0.15" />
+                <circle cx="50" cy="30" r="5" fill="currentColor" />
+                
+                {/* Mountain peaks shaped like book pages */}
+                <path
+                  d="M20 72L42 35L56 56"
+                  stroke="currentColor"
+                  strokeWidth="5.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M40 72L64 25L80 65"
+                  stroke="currentColor"
+                  strokeWidth="5.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.75"
+                />
+                
+                {/* Base foundation line */}
+                <path
+                  d="M18 72H82"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+            <span>Alpine Grow</span>
           </a>
           <div className="hidden md:flex items-center gap-8 font-semibold">
             <a href="#features" className="text-on-surface-variant hover:text-primary transition-colors">
@@ -410,14 +447,14 @@ export default function Home() {
                 <p className="text-on-surface-variant text-base leading-relaxed mb-6">{item.probDesc}</p>
 
                 <div className="p-5 bg-green-50/50 border-l-4 border-green-500 rounded-r-2xl">
-                  <span className="text-xs font-bold text-green-700 tracking-wider mb-1 block uppercase">THE EDFLOW PRO ADVANTAGE</span>
+                  <span className="text-xs font-bold text-green-700 tracking-wider mb-1 block uppercase">THE ALPINE GROW ADVANTAGE</span>
                   <h4 className="font-bold text-on-surface text-sm mb-1">{item.solTitle}</h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">{item.solDesc}</p>
                 </div>
               </div>
-              <div className={`rounded-2xl overflow-hidden max-h-[350px] flex items-center justify-center ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`w-full aspect-square max-w-[320px] md:max-w-[350px] mx-auto rounded-2xl overflow-hidden flex items-center justify-center bg-slate-50/40 border border-slate-100/60 ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
                 {item.gif ? (
-                  <img src={item.gif} alt={item.imageAlt} className="w-full h-full object-contain" />
+                  <img src={item.gif} alt={item.imageAlt} className="w-full h-full object-cover" />
                 ) : (
                   <img src={item.image} alt={item.imageAlt} className="w-full h-full object-cover" />
                 )}
@@ -477,7 +514,7 @@ export default function Home() {
               Measurable Success for Your Institution
             </h2>
             <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
-              See the exact operational and financial gains that single-campus and multi-school networks experience when migrating.
+              See the exact operational and financial gains that schools experience when migrating to our platform.
             </p>
           </div>
 
@@ -555,18 +592,18 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;EduFlow Pro transformed our administrative operations. The fee collection module alone saved us 40 hours of manual Excel entry every single month.&rdquo;
+                  &ldquo;Alpine grow transformed our administrative operations. The fee collection module alone saved our accounts team 40 hours of manual Excel entry every single month.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBEgloi9e4JCc-647JQsJOJUyxazSR1pUWCXTibO2_o71gfusDNGAt6w4ThcmSOItjVD3WOUbR7fznHDOH2yUbDnSiWzclBDZeylh6V7PhUDQm1Bo6eLYAORS099OgGCmsBZx8xnKJ05lZX1mGpLCVPbzH-qRk862gAgDKR_cJCbL0giWpBy2gBI_Da5XULkxWiS4vx7uL2-9NDnvZ2UL_qw8HFc_eu1LC_SWiSnoHRekPxDyzx0YHtqpdBSdncm834amhOo4g5mtw"
-                  alt="Principal Sarah Jenkins"
+                  src="/assets/avatar_meenakshi_iyer.png"
+                  alt="Principal Meenakshi Iyer"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-on-surface text-sm">Sarah Jenkins</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Principal, Oakwood International</p>
+                  <p className="font-bold text-on-surface text-sm">Mrs. Meenakshi Iyer</p>
+                  <p className="text-xs text-on-surface-variant font-medium">Principal, Little Flower Public School</p>
                 </div>
               </div>
             </div>
@@ -580,18 +617,18 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;The parent portal application has improved parent-teacher communications immensely. Absentee warnings and test results publish instantly.&rdquo;
+                  &ldquo;The WhatsApp alerts have bridged the communication gap completely. Parents now receive fee reminders and attendance reports directly on their phones, resulting in much faster fee clearances.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMU0lmvFjESId-WQwAzuiXiIswUCWhf4ly_K89ur5SsJCeMEpdUKntFUSbvy1w9GG_M0iK7K_0LnHaQEvGkf8aEEXzp1TckJMckMPJN5lftmsuPV-rIv83wZgM5BolmsbPrps4BLe6GSUblKjFpkbaPT9gT_W8OG0Cq2ACd6zzH8-jEXdpHe5j110IxxAnaNb9jHnRX7oy93RACyoFwwjCR5vaKy4KiJtr5oU7G3npStNpto3SBe5DFDoLNm2BFz93TGGFiupCXp2u"
-                  alt="Director David Chen"
+                  src="/assets/avatar_rajesh_kumar.png"
+                  alt="Trustee Rajesh Kumar"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-on-surface text-sm">David Chen</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Director, Horizon Academics</p>
+                  <p className="font-bold text-on-surface text-sm">Mr. Rajesh Kumar</p>
+                  <p className="text-xs text-on-surface-variant font-medium">Trustee, Shanti Vidya Mandir</p>
                 </div>
               </div>
             </div>
@@ -605,18 +642,18 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;Migrating to EdFlow Pro was the absolute best decision for our administrative staff. Our data was safely moved within a weekend. Outstanding support!&rdquo;
+                  &ldquo;Migrating our 3,000+ student records to Alpine grow was exceptionally smooth. Their support team moved our entire database over a weekend without any downtime.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz-Djd_V2vveRLpNr71xCW5tlIEJZYvwvMMh8Bv2pTtg6SHNKmg_EDfhriYbXWroLO7wskzWjXENJ_Jfs-uhWJiLo6LdbzfHf4ASEAKr0xen-9JN-n4YXXEZzmPsBR0k42T6kCGrzFnL_mRHFG1X7QGQsMtt9Y1CC6P5DyjKQIfn3ZgdneFPN4xiHJB7H3G99Wpz15nzQhkyjO49BoI-6mIWeAaH1-9mQPBSex5RSP5e8W8zsWf7UekemTOg04JTmZ9POC-sB8hGoQ"
-                  alt="Head Admin Emily Rodriguez"
+                  src="/assets/avatar_shalini_sharma.png"
+                  alt="Admin Head Shalini Sharma"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-on-surface text-sm">Emily Rodriguez</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Head Administrator, Global Scholars Group</p>
+                  <p className="font-bold text-on-surface text-sm">Ms. Shalini Sharma</p>
+                  <p className="text-xs text-on-surface-variant font-medium">Admin Head, Sanskriti Academy</p>
                 </div>
               </div>
             </div>
@@ -667,12 +704,54 @@ export default function Home() {
       <footer className="bg-white border-t border-outline-variant/30 py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-4">
-            <h3 className="font-display font-extrabold text-xl text-primary tracking-tight">EduFlow Pro</h3>
+            <div className="flex items-center gap-2 text-primary">
+              <div className="w-6 h-6 rounded-md bg-primary/10 flex items-center justify-center p-0.5 text-primary">
+                <svg
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-full h-full"
+                >
+                  {/* Sun of knowledge */}
+                  <circle cx="50" cy="30" r="10" fill="currentColor" opacity="0.15" />
+                  <circle cx="50" cy="30" r="5" fill="currentColor" />
+                  
+                  {/* Mountain peaks shaped like book pages */}
+                  <path
+                    d="M20 72L42 35L56 56"
+                    stroke="currentColor"
+                    strokeWidth="5.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M40 72L64 25L80 65"
+                    stroke="currentColor"
+                    strokeWidth="5.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity="0.75"
+                  />
+                  
+                  {/* Base foundation line */}
+                  <path
+                    d="M18 72H82"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <span className="font-display font-extrabold text-xl tracking-tight">Alpine grow</span>
+            </div>
             <p className="text-on-surface-variant text-sm max-w-sm leading-relaxed">
-              © {new Date().getFullYear()} EduFlow Pro. All rights reserved.
+              © {new Date().getFullYear()} Alpine grow. All rights reserved.
             </p>
             <p className="text-on-surface-variant text-xs max-w-sm">
-              Transforming administration through secure, high-converting digital portals built for Single Campus and Multi-Campus schools.
+              Transforming administration through secure, high-converting digital portals built for modern schools.
+            </p>
+            <p className="text-on-surface-variant/80 text-xs pt-1">
+              Made with ❤️ in India
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 text-left">
@@ -692,7 +771,7 @@ export default function Home() {
                 {/* Hiding Request a Demo temporarily, replacing with Waitlist */}
                 {/* <li><a href="#demo" className="hover:text-primary transition-colors">Request a Demo</a></li> */}
                 <li><a href="#waitlist" className="hover:text-primary transition-colors">Join the Waitlist</a></li>
-                <li><a href="mailto:support@edflowpro.com" className="hover:text-primary transition-colors font-semibold">support@edflowpro.com</a></li>
+                <li><a href="mailto:support@alpinegrow.com" className="hover:text-primary transition-colors font-semibold">support@alpinegrow.com</a></li>
               </ul>
             </div>
           </div>

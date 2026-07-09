@@ -46,18 +46,18 @@ export async function submitWaitlistRequest(formData: WaitlistFormValues): Promi
     if (resend) {
       try {
         await resend.emails.send({
-          from: 'EduFlow Pro <onboarding@resend.dev>',
+          from: 'Alpine grow <onboarding@resend.dev>',
           to: result.data.emailAddress,
           subject: "You're on the list!",
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px;">
-              <h2 style="color: #1D4ED8; font-size: 24px;">Welcome to the EduFlow Pro Waitlist!</h2>
+               <h2 style="color: #1D4ED8; font-size: 24px;">Welcome to the Alpine grow Waitlist!</h2>
               <p>Hi there,</p>
-              <p>Thank you for your interest in EduFlow Pro. We've successfully registered <strong>${result.data.schoolName}</strong> on our priority access list.</p>
+              <p>Thank you for your interest in Alpine grow. We've successfully registered <strong>${result.data.schoolName}</strong> on our priority access list.</p>
               <p>We will keep you updated and notify you as soon as registrations open for institutions of your size (<strong>${result.data.studentStrength} students</strong>).</p>
               <br />
               <p>Best regards,</p>
-              <p><strong>The EduFlow Pro Team</strong></p>
+              <p><strong>The Alpine grow Team</strong></p>
             </div>
           `,
         });
