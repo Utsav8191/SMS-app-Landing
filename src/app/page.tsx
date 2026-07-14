@@ -18,7 +18,10 @@ import {
   UserCheck,
   SmartphoneNfc,
   Calendar,
-  Shield
+  Shield,
+  WifiOff,
+  FileSpreadsheet,
+  BarChart3
 } from 'lucide-react';
 
 import WaitlistForm from '@/components/WaitlistForm';
@@ -264,9 +267,6 @@ export default function Home() {
             {/* <a href="/pricing" className="text-on-surface-variant hover:text-[#1D4ED8] transition-colors">
               Pricing
             </a> */}
-            <a href="#showcase" className="text-on-surface-variant hover:text-primary transition-colors">
-              Live Showcase
-            </a>
             <a href="#why-choose-us" className="text-on-surface-variant hover:text-primary transition-colors">
               Why Us
             </a>
@@ -397,29 +397,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="bg-white py-12 border-y border-outline-variant/20">
-        <div className="max-w-7xl mx-auto px-6 md:px-20">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="space-y-1">
-              <h3 className="font-display font-extrabold text-3xl md:text-4xl text-accent-gold">10+</h3>
-              <p className="text-xs md:text-sm font-bold text-on-surface-variant uppercase tracking-wider">Schools Trust Us</p>
-            </div>
-            <div className="space-y-1">
-              <h3 className="font-display font-extrabold text-3xl md:text-4xl text-accent-gold">25,000+</h3>
-              <p className="text-xs md:text-sm font-bold text-on-surface-variant uppercase tracking-wider">Students Enrolled</p>
-            </div>
-            <div className="space-y-1">
-              <h3 className="font-display font-extrabold text-3xl md:text-4xl text-accent-gold">1M+</h3>
-              <p className="text-xs md:text-sm font-bold text-on-surface-variant uppercase tracking-wider">Attendance Logs</p>
-            </div>
-            <div className="space-y-1">
-              <h3 className="font-display font-extrabold text-3xl md:text-4xl text-accent-gold">$5M+</h3>
-              <p className="text-xs md:text-sm font-bold text-on-surface-variant uppercase tracking-wider">Fees Processed</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Problem-Solution Section */}
       <section className="py-24 bg-background-alt space-y-16">
@@ -461,6 +439,125 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Teachers Portal Section */}
+      <section className="py-24 bg-gradient-to-tr from-slate-50 via-white to-indigo-50/30 border-y border-outline-variant/10 overflow-hidden" id="teachers-portal">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Section Header at Top Center */}
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-4 bg-primary/10 text-primary font-bold rounded-full text-xs mb-4 uppercase tracking-wider">
+              DEDICATED TEACHERS PORTAL
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg leading-tight">
+              Empower Educators with an App-Like Experience
+            </h2>
+            <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
+              A dedicated mobile-first portal for teachers, designed to cut classroom admin down to seconds.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left side: Mockup showing Teachers Portal interface */}
+            <div className="relative flex justify-center lg:justify-start items-center lg:pl-12">
+              
+              {/* Decorative background glow */}
+              <div className="absolute inset-4 rounded-3xl bg-gradient-to-tr from-primary/10 to-indigo-500/10 blur-lg opacity-25 z-0" />
+              
+              {/* Mockup Image container */}
+              <div className="relative w-full max-w-[290px] z-10 flex items-center justify-center bg-transparent">
+                <img
+                  className="w-full h-auto object-contain"
+                  src="/assets/phone_mockup.png"
+                  alt="Teachers Portal interface representation"
+                />
+              </div>
+
+            </div>
+
+            {/* Right side: features list */}
+            <div className="space-y-6 lg:pl-8">
+
+              {/* Feature 1 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                  <Smartphone className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Lightweight PWA
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Installable on any mobile or desktop device with native-app smoothness and instant loading.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                  <WifiOff className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Offline-First Capabilities
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Mark attendance offline. Changes queue locally and sync automatically when internet is restored.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                  <FileSpreadsheet className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    CSV Attendance Exports
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Generate and download monthly attendance spreadsheets for any student instantly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
+                  <UserCheck className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Flexible Attendance Capture
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Supports marking Present and Absent status, alongside specific Leave, Late, and Half-Day tags.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 5 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                  <BarChart3 className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Student Performance Analytics
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Identify attendance patterns, analyze classroom participation, and spot support needs early.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -570,40 +667,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials / Pain Points Carousel */}
       <section className="py-24 bg-surface-container-low overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-20">
           <div className="text-center mb-16">
             <span className="inline-block py-1 px-4 bg-primary/10 text-primary font-bold rounded-full text-xs mb-4 uppercase tracking-wider">
-              TRUSTED BY PRINCIPALS
+              EDUCATORS' VOICE
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-              Recommended by Leading School Administrators
+            <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg max-w-3xl mx-auto leading-tight">
+              We heard from educators to solve the real daily operations hassle
             </h2>
           </div>
 
           <div className="flex overflow-x-auto gap-8 pb-6 snap-x no-scrollbar">
+            
             {/* Card 1 */}
             <div className="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-3xl shadow-sm border border-gray-200/50 snap-center flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="flex text-accent-gold gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent-gold text-accent-gold" />
-                  ))}
+                <div className="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center">
+                  <Clock className="w-5 h-5" />
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;Alpine grow transformed our administrative operations. The fee collection module alone saved our accounts team 40 hours of manual Excel entry every single month.&rdquo;
+                  &ldquo;Generic school ERPs are incredibly bloated. Just to mark a student late, I had to click through 5 dropdown screens and wait for slow page reloads. It was adding 20 minutes to my daily admin load.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
-                  src="/assets/avatar_meenakshi_iyer.png"
-                  alt="Principal Meenakshi Iyer"
+                  src="/assets/avatar_shalini_sharma.png"
+                  alt="Educator Shalini Sharma"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-on-surface text-sm">Mrs. Meenakshi Iyer</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Principal, Little Flower Public School</p>
+                  <p className="font-bold text-on-surface text-sm">Mrs. Shalini Sharma</p>
+                  <p className="text-xs text-on-surface-variant font-medium">High School Coordinator, Sanskriti Academy</p>
                 </div>
               </div>
             </div>
@@ -611,24 +707,22 @@ export default function Home() {
             {/* Card 2 */}
             <div className="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-3xl shadow-sm border border-gray-200/50 snap-center flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="flex text-accent-gold gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent-gold text-accent-gold" />
-                  ))}
+                <div className="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center">
+                  <WifiOff className="w-5 h-5" />
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;The WhatsApp alerts have bridged the communication gap completely. Parents now receive fee reminders and attendance reports directly on their phones, resulting in much faster fee clearances.&rdquo;
+                  &ldquo;Whenever the school network goes down, other management portals completely lock us out. We can't log attendance. Offline capabilities shouldn't be an afterthought.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
                   src="/assets/avatar_rajesh_kumar.png"
-                  alt="Trustee Rajesh Kumar"
+                  alt="Educator Rajesh Kumar"
                 />
                 <div className="text-left">
                   <p className="font-bold text-on-surface text-sm">Mr. Rajesh Kumar</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Trustee, Shanti Vidya Mandir</p>
+                  <p className="text-xs text-on-surface-variant font-medium">Science Teacher, Shanti Vidya Mandir</p>
                 </div>
               </div>
             </div>
@@ -636,27 +730,26 @@ export default function Home() {
             {/* Card 3 */}
             <div className="min-w-[320px] md:min-w-[400px] bg-white p-8 rounded-3xl shadow-sm border border-gray-200/50 snap-center flex flex-col justify-between">
               <div className="space-y-4">
-                <div className="flex text-accent-gold gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent-gold text-accent-gold" />
-                  ))}
+                <div className="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center">
+                  <FileSpreadsheet className="w-5 h-5" />
                 </div>
                 <p className="text-on-surface-variant text-base italic leading-relaxed">
-                  &ldquo;Migrating our 3,000+ student records to Alpine grow was exceptionally smooth. Their support team moved our entire database over a weekend without any downtime.&rdquo;
+                  &ldquo;Preparing monthly attendance reports for board audits has been a nightmare in other systems. I had to export multiple class files, copy-paste raw data, and manually format Excel sheets for hours.&rdquo;
                 </p>
               </div>
               <div className="flex items-center gap-4 pt-6 mt-6 border-t border-gray-100">
                 <img
                   className="w-12 h-12 rounded-full object-cover"
-                  src="/assets/avatar_shalini_sharma.png"
-                  alt="Admin Head Shalini Sharma"
+                  src="/assets/avatar_meenakshi_iyer.png"
+                  alt="Educator Meenakshi Iyer"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-on-surface text-sm">Ms. Shalini Sharma</p>
-                  <p className="text-xs text-on-surface-variant font-medium">Admin Head, Sanskriti Academy</p>
+                  <p className="font-bold text-on-surface text-sm">Mrs. Meenakshi Iyer</p>
+                  <p className="text-xs text-on-surface-variant font-medium">Primary Section Lead, Little Flower School</p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -761,7 +854,7 @@ export default function Home() {
                 {/* Hiding Pricing & Plans temporarily */}
                 {/* <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing & Plans</a></li> */}
                 <li><a href="#features" className="hover:text-primary transition-colors">Key Modules</a></li>
-                <li><a href="#showcase" className="hover:text-primary transition-colors">Screen Showcase</a></li>
+                <li><a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
               </ul>
             </div>
             <div className="space-y-4">
@@ -771,7 +864,6 @@ export default function Home() {
                 {/* Hiding Request a Demo temporarily, replacing with Waitlist */}
                 {/* <li><a href="#demo" className="hover:text-primary transition-colors">Request a Demo</a></li> */}
                 <li><a href="#waitlist" className="hover:text-primary transition-colors">Join the Waitlist</a></li>
-                <li><a href="mailto:support@alpinegrow.com" className="hover:text-primary transition-colors font-semibold">support@alpinegrow.com</a></li>
               </ul>
             </div>
           </div>
