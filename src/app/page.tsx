@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 
 import WaitlistForm from '@/components/WaitlistForm';
-import DashboardShowcase from '@/components/DashboardShowcase';
+// import DashboardShowcase from '@/components/DashboardShowcase';
 import FAQ from '@/components/FAQ';
 
 export default function Home() {
@@ -227,7 +227,7 @@ export default function Home() {
                 {/* Sun of knowledge */}
                 <circle cx="50" cy="30" r="10" fill="currentColor" opacity="0.15" />
                 <circle cx="50" cy="30" r="5" fill="currentColor" />
-                
+
                 {/* Mountain peaks shaped like book pages */}
                 <path
                   d="M20 72L42 35L56 56"
@@ -244,7 +244,7 @@ export default function Home() {
                   strokeLinejoin="round"
                   opacity="0.75"
                 />
-                
+
                 {/* Base foundation line */}
                 <path
                   d="M18 72H82"
@@ -333,17 +333,17 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-[420px] md:h-[500px] flex items-center justify-center"
+            className="relative h-[550px] md:h-[650px] lg:h-[720px] flex items-center justify-center"
           >
-            <div className="w-full max-w-md md:max-w-lg bg-transparent relative">
+            <div className="w-full max-w-3xl md:max-w-3xl lg:max-w-3xl xl:max-w-[840px] bg-transparent relative">
               <img
                 className="w-full h-auto object-contain opacity-95"
-                src="/assets/heroSection.png"
+                src="/assets/Mockup_hero.png"
                 alt="Modern interactive dashboard showcase representing administrative performance"
               />
 
               {/* Floating Glass Card 1 */}
-              <div className="absolute -top-3 -left-6 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '0s' }}>
+              <div className="absolute -top-12 -left-12 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '0s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                     <Users className="w-5 h-5" />
@@ -356,7 +356,7 @@ export default function Home() {
               </div>
 
               {/* Floating Glass Card 2 */}
-              <div className="absolute top-1/4 -right-8 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '2s' }}>
+              <div className="absolute top-[4%] -right-16 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold">
                     <Wallet className="w-5 h-5" />
@@ -369,7 +369,7 @@ export default function Home() {
               </div>
 
               {/* Floating Glass Card 3 */}
-              <div className="absolute -bottom-4 left-1/4 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '4s' }}>
+              <div className="absolute -bottom-18 left-[3%] glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '4s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#7f2500]/10 flex items-center justify-center text-[#7f2500]">
                     <Sparkles className="w-5 h-5" />
@@ -381,7 +381,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Floating Glass Card 4 */}
-              <div className="absolute top-2/3 -right-8 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-[80%] -right-30 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '1.5s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                     <Smartphone className="w-5 h-5" />
@@ -501,7 +501,7 @@ export default function Home() {
       </section>
 
       {/* Live Showcase Tab Component */}
-      <DashboardShowcase />
+      {/* <DashboardShowcase /> */}
 
       {/* Benefits Section */}
       <section className="py-24 bg-white">
@@ -715,7 +715,7 @@ export default function Home() {
                   {/* Sun of knowledge */}
                   <circle cx="50" cy="30" r="10" fill="currentColor" opacity="0.15" />
                   <circle cx="50" cy="30" r="5" fill="currentColor" />
-                  
+
                   {/* Mountain peaks shaped like book pages */}
                   <path
                     d="M20 72L42 35L56 56"
@@ -732,7 +732,7 @@ export default function Home() {
                     strokeLinejoin="round"
                     opacity="0.75"
                   />
-                  
+
                   {/* Base foundation line */}
                   <path
                     d="M18 72H82"
