@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alpine grow | Modern School Management System',
     description: 'Transform your school administration with our premium, cloud-based ERP solution.',
+  },
+  verification: {
+    google: 'Hz94W5iZhSk3RBqcYA2a7JwKmTzGUZnIhaCyJuaIIYc',
   }
 };
 
