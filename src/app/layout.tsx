@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Nunito } from 'next/font/google';
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function RootLayout({
     <html lang="en" className={`${plusJakartaSans.variable} ${nunito.variable} scroll-smooth`}>
       <body className="font-sans antialiased text-on-surface bg-background">
         {children}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   );
