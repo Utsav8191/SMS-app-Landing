@@ -16,8 +16,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://alpinegrow.in'),
   title: 'Alpine grow | Modern School Management System',
-  description: 'Streamline admissions, student information, automated fee payments, Smart RFID attendance, grading systems, and school operations in one premium cloud-based ERP.',
+  description: 'Simplify institutional administration, increase transparent parent-teacher communications, and secure fee collections.',
   keywords: 'school management system, school ERP, student tracking, attendance software, fee management, online admissions, Alpine grow, school software',
   icons: {
     icon: '/favicon.svg',
@@ -25,12 +26,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Alpine grow | Modern School Management System',
     description: 'Simplify institutional administration, increase transparent parent-teacher communications, and secure fee collections.',
+    url: 'https://alpinegrow.in',
+    siteName: 'Alpine grow',
+    images: [
+      {
+        url: '/preview-product.png',
+        width: 1200,
+        height: 630,
+        alt: 'Alpine grow - Modern School Management System',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Alpine grow | Modern School Management System',
-    description: 'Transform your school administration with our premium, cloud-based ERP solution.',
+    description: 'Simplify institutional administration, increase transparent parent-teacher communications, and secure fee collections.',
+    images: ['/preview-product.png'],
   },
   verification: {
     google: 'Hz94W5iZhSk3RBqcYA2a7JwKmTzGUZnIhaCyJuaIIYc',
