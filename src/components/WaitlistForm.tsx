@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import { submitWaitlistRequest } from '@/actions/submitWaitlist';
 import { waitlistFormSchema, studentStrengths } from '@/schemas/waitlist';
 import type { WaitlistFormValues } from '@/schemas/waitlist';
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function WaitlistForm() {
   const router = useRouter();
@@ -37,6 +38,12 @@ export default function WaitlistForm() {
     try {
       const response = await submitWaitlistRequest(data);
       if (response.success) {
+        // Trigger GA4 custom event on successful waitlist submission
+        sendGAEvent('event', 'waitlist_signup', {
+          event_category: 'engagement',
+          event_label: 'landing_page_waitlist',
+        });
+
         const row = response.rowNumber || 2;
         router.push(`/waitlist/success?row=${row}`);
       } else {
