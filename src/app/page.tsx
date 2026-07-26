@@ -126,6 +126,15 @@ export default function Home() {
       imageAlt: 'Parents receiving direct updates on their mobile devices'
     },
     {
+      tag: 'DIRECT MESSAGING',
+      probTitle: 'Pre-Paid Credits & Per-Message Markups',
+      probDesc: 'Managing mandatory pre-paid message packs and middleman top-ups adds unnecessary friction and extra costs for daily school notifications.',
+      solTitle: 'Direct Integration, Zero Markup',
+      solDesc: "Connect your own WhatsApp Business account directly. Pay Meta's baseline rates with zero middleman commissions or extra markup.",
+      image: '/assets/direct_whatsapp_messaging.png',
+      imageAlt: 'Direct WhatsApp integration with zero markup'
+    },
+    {
       tag: 'BLOATED SOFTWARE',
       probTitle: "Stop Paying for Features You Don't Use",
       probDesc: 'Most school ERPs are packed with modules that add cost, complexity, and training overhead. Schools end up navigating clutter instead of focusing on daily operations.',
