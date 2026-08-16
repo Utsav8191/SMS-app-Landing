@@ -342,62 +342,75 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-[550px] md:h-[650px] lg:h-[720px] flex items-center justify-center"
+            className="relative min-h-[340px] sm:min-h-[460px] md:min-h-[560px] lg:h-[720px] flex items-center justify-center mt-4 sm:mt-6 lg:mt-0"
           >
-            <div className="w-full max-w-3xl md:max-w-3xl lg:max-w-3xl xl:max-w-[840px] bg-transparent relative">
+            <div className="w-full max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-[840px] bg-transparent relative">
               <img
-                className="w-full h-auto object-contain opacity-95"
+                className="w-full h-auto object-contain opacity-95 rounded-xl sm:rounded-2xl"
                 src="/assets/Mockup_hero.png"
                 alt="Modern interactive dashboard showcase representing administrative performance"
               />
 
               {/* Floating Glass Card 1 */}
-              <div className="absolute -top-12 -left-12 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '0s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                    <Users className="w-5 h-5" />
+              <div
+                className="absolute -top-4 -left-2 sm:-top-8 sm:-left-6 md:-top-12 md:-left-12 glass-card p-2 sm:p-3 md:p-4 rounded-xl sm:rounded-2xl shadow-xl floating z-20"
+                style={{ animationDelay: '0s' }}
+              >
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                    <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-extrabold text-on-surface">Student Profiles</p>
-                    <p className="text-[10px] text-on-surface-variant">2,400+ Active</p>
+                    <p className="text-[10px] sm:text-xs font-extrabold text-on-surface leading-tight">Student Profiles</p>
+                    <p className="text-[8px] sm:text-[10px] text-on-surface-variant leading-tight">2,400+ Active</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating Glass Card 2 */}
-              <div className="absolute top-[4%] -right-16 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '2s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold">
-                    <Wallet className="w-5 h-5" />
+              <div
+                className="absolute -top-3 -right-2 sm:top-[4%] sm:-right-6 md:top-[4%] md:-right-10 lg:-right-14 glass-card p-2 sm:p-3 md:p-4 rounded-xl sm:rounded-2xl shadow-xl floating z-20"
+                style={{ animationDelay: '2s' }}
+              >
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold flex-shrink-0">
+                    <Wallet className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-extrabold text-on-surface">Fee Collection</p>
-                    <p className="text-[10px] text-on-surface-variant">98% Success Rate</p>
+                    <p className="text-[10px] sm:text-xs font-extrabold text-on-surface leading-tight">Fee Collection</p>
+                    <p className="text-[8px] sm:text-[10px] text-on-surface-variant leading-tight">98% Success Rate</p>
                   </div>
                 </div>
               </div>
 
               {/* Floating Glass Card 3 */}
-              <div className="absolute -bottom-18 left-[3%] glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '4s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#7f2500]/10 flex items-center justify-center text-[#7f2500]">
-                    <Sparkles className="w-5 h-5" />
+              <div
+                className="absolute -bottom-4 left-0 sm:-bottom-8 sm:left-[2%] md:-bottom-12 md:left-[3%] glass-card p-2 sm:p-3 md:p-4 rounded-xl sm:rounded-2xl shadow-xl floating z-20"
+                style={{ animationDelay: '4s' }}
+              >
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-[#7f2500]/10 flex items-center justify-center text-[#7f2500] flex-shrink-0">
+                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-extrabold text-on-surface">AI Command Center</p>
-                    <p className="text-[10px] text-on-surface-variant">Available 24/7</p>
+                    <p className="text-[10px] sm:text-xs font-extrabold text-on-surface leading-tight">AI Command Center</p>
+                    <p className="text-[8px] sm:text-[10px] text-on-surface-variant leading-tight">Available 24/7</p>
                   </div>
                 </div>
               </div>
+
               {/* Floating Glass Card 4 */}
-              <div className="absolute top-[80%] -right-30 glass-card p-4 rounded-2xl shadow-xl floating z-20" style={{ animationDelay: '1.5s' }}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
-                    <Smartphone className="w-5 h-5" />
+              <div
+                className="absolute -bottom-3 -right-2 sm:top-[75%] sm:-right-4 md:top-[80%] md:-right-8 lg:-right-16 glass-card p-2 sm:p-3 md:p-4 rounded-xl sm:rounded-2xl shadow-xl floating z-20"
+                style={{ animationDelay: '1.5s' }}
+              >
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 flex-shrink-0">
+                    <Smartphone className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-extrabold text-on-surface">Teachers Portal</p>
-                    <p className="text-[10px] text-on-surface-variant">Offline capabilities</p>
+                    <p className="text-[10px] sm:text-xs font-extrabold text-on-surface leading-tight">Teachers Portal</p>
+                    <p className="text-[8px] sm:text-[10px] text-on-surface-variant leading-tight">Offline capabilities</p>
                   </div>
                 </div>
               </div>
