@@ -27,6 +27,7 @@ import {
 import WaitlistForm from '@/components/WaitlistForm';
 // import DashboardShowcase from '@/components/DashboardShowcase';
 import FAQ from '@/components/FAQ';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -865,6 +866,9 @@ export default function Home() {
             <p className="text-on-surface-variant text-xs max-w-sm">
               Transforming administration through secure, high-converting digital portals built for modern schools.
             </p>
+            <div className="pt-2">
+              <SocialLinks />
+            </div>
             <p className="text-on-surface-variant/80 text-xs pt-1">
               Made with ❤️ in India
             </p>

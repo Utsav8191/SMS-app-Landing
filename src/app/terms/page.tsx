@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowLeft, ShieldCheck, Clock } from 'lucide-react';
+import SocialLinks from '@/components/SocialLinks';
 
 export default function TermsOfService() {
   return (
@@ -194,8 +195,9 @@ export default function TermsOfService() {
       </main>
 
       {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-6 md:px-20 py-8 border-t border-slate-100/80 text-center text-xs text-on-surface-variant font-medium">
+      <footer className="max-w-7xl mx-auto px-6 md:px-20 py-8 border-t border-slate-100/80 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant font-medium">
         <p>&copy; {new Date().getFullYear()} Alpine Grow. All rights reserved.</p>
+        <SocialLinks size="sm" />
       </footer>
 
     </div>
