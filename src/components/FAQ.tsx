@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackFaqToggle } from '@/lib/analytics';
 
 interface FAQItemProps {
   question: string;
@@ -12,11 +13,17 @@ interface FAQItemProps {
 function FAQItem({ question, answer }: FAQItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleToggle = () => {
+    const nextState = !isOpen;
+    setIsOpen(nextState);
+    trackFaqToggle(question, nextState);
+  };
+
   return (
     <div className="border-b border-gray-200/80 py-4 last:border-b-0">
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleToggle}
         className="flex w-full justify-between items-center py-4 text-left font-bold text-lg text-on-surface hover:text-primary transition-colors focus:outline-none"
       >
         <span>{question}</span>

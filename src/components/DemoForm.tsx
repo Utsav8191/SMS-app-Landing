@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckCircle2, AlertCircle, Calendar, Clock, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { submitDemoRequest } from '@/actions/submitDemo';
+import { trackFormSubmit } from '@/lib/analytics';
 import {
   demoFormSchema,
   designations,
@@ -54,6 +55,15 @@ export default function DemoForm() {
     try {
       const response = await submitDemoRequest(data);
       if (response.success) {
+        // Trigger PostHog custom event (STRICTLY NO PII: no names, emails, phones, or specific school names)
+        trackFormSubmit('demo_request', {
+          designation: data.designation || 'unspecified',
+          school_type: data.schoolType || 'unspecified',
+          student_strength: data.studentStrength || 'unspecified',
+          city: data.city || 'unspecified',
+          state: data.state || 'unspecified',
+        });
+
         setSubmitResult({
           success: true,
           message: response.message,

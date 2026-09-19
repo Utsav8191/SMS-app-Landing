@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackOutboundLink } from '@/lib/analytics';
 
 export function FacebookIcon({ className = 'w-4 h-4' }: { className?: string }) {
   return (
@@ -40,6 +41,7 @@ export default function SocialLinks({ size = 'md' }: { size?: 'sm' | 'md' }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Follow Alpine Grow on Instagram"
+        onClick={() => trackOutboundLink(SOCIAL_LINKS.instagram, 'Instagram', 'social_links')}
         className={`${buttonSize} rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-white hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] transition-all shadow-sm hover:scale-110`}
       >
         <InstagramIcon className={iconSize} />
@@ -49,6 +51,7 @@ export default function SocialLinks({ size = 'md' }: { size?: 'sm' | 'md' }) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Follow Alpine Grow on Facebook"
+        onClick={() => trackOutboundLink(SOCIAL_LINKS.facebook, 'Facebook', 'social_links')}
         className={`${buttonSize} rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-white hover:bg-[#1877F2] transition-all shadow-sm hover:scale-110`}
       >
         <FacebookIcon className={iconSize} />

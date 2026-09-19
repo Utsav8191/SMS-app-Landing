@@ -28,6 +28,7 @@ import WaitlistForm from '@/components/WaitlistForm';
 // import DashboardShowcase from '@/components/DashboardShowcase';
 import FAQ from '@/components/FAQ';
 import SocialLinks from '@/components/SocialLinks';
+import { trackCtaClick } from '@/lib/analytics';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -331,6 +332,7 @@ export default function Home() {
               </a> */}
               <a
                 href="#waitlist"
+                onClick={() => trackCtaClick('Join the Waitlist', 'hero', '#waitlist')}
                 className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-8 py-4 rounded-xl font-bold text-base hover:scale-[1.03] transition-all shadow-lg hover:shadow-primary/30"
               >
                 Join the Waitlist
@@ -808,6 +810,7 @@ export default function Home() {
             </a> */}
             <a
               href="#waitlist"
+              onClick={() => trackCtaClick('Join the Waitlist', 'bottom_banner', '#waitlist')}
               className="bg-[#1D4ED8] hover:bg-[#1B3A8A] text-white px-10 py-5 rounded-xl font-bold text-base hover:scale-105 transition-all shadow-xl"
             >
               Join the Waitlist

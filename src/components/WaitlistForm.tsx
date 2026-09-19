@@ -9,6 +9,7 @@ import { submitWaitlistRequest } from '@/actions/submitWaitlist';
 import { waitlistFormSchema, studentStrengths } from '@/schemas/waitlist';
 import type { WaitlistFormValues } from '@/schemas/waitlist';
 import { sendGAEvent } from '@next/third-parties/google';
+import { trackFormSubmit } from '@/lib/analytics';
 
 export default function WaitlistForm() {
   const router = useRouter();
@@ -38,6 +39,11 @@ export default function WaitlistForm() {
     try {
       const response = await submitWaitlistRequest(data);
       if (response.success) {
+        // Trigger PostHog custom event (STRICTLY NO PII: no email, phone, or school name)
+        trackFormSubmit('waitlist', {
+          student_strength: data.studentStrength || 'unspecified',
+        });
+
         // Trigger GA4 custom event on successful waitlist submission
         sendGAEvent('event', 'waitlist_signup', {
           event_category: 'engagement',
