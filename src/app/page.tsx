@@ -21,7 +21,12 @@ import {
   Shield,
   WifiOff,
   FileSpreadsheet,
-  BarChart3
+  BarChart3,
+  CreditCard,
+  Printer,
+  QrCode,
+  FileText,
+  CheckCircle2
 } from 'lucide-react';
 
 import WaitlistForm from '@/components/WaitlistForm';
@@ -32,6 +37,7 @@ import { trackCtaClick } from '@/lib/analytics';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const [cardOrientation, setCardOrientation] = useState<'vertical' | 'horizontal'>('vertical');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,6 +111,13 @@ export default function Home() {
       description: 'Fully compliant with national school reporting frameworks, ensuring audit readiness and reports generation.',
       colorClass: 'bg-teal-50 text-teal-600 group-hover:bg-teal-600 group-hover:text-white',
       titleColorClass: 'group-hover:text-teal-600'
+    },
+    {
+      icon: <CreditCard className="w-6 h-6" />,
+      title: 'Student ID Card Studio',
+      description: 'Design and batch-generate student ID cards with custom branding, anti-fraud QR codes, and print-ready A4 or PVC layouts.',
+      colorClass: 'bg-cyan-50 text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white',
+      titleColorClass: 'group-hover:text-cyan-600'
     }
   ];
 
@@ -116,7 +129,7 @@ export default function Home() {
       solTitle: 'Centralized Cloud Repository',
       solDesc: 'A secure and structured cloud platform housing everything from online admissions to alumni databases, accessible within a single click from any device.',
       image: '/assets/File_searching-cuate.png',
-      imageAlt: 'Scattered manual paper logs contrast with digital workflows'
+      imageAlt: 'Alpine Grow centralized school cloud repository replacing manual paper registers and fragmented files'
     },
     {
       tag: 'ENGAGEMENT',
@@ -125,7 +138,7 @@ export default function Home() {
       solTitle: 'Direct WhatsApp & Email Updates',
       solDesc: 'Connect with parents instantly on the platforms they use every day. Send automated attendance alerts, and circulars directly to their WhatsApp and email inbox.',
       image: '/assets/parent_communication.png',
-      imageAlt: 'Parents receiving direct updates on their mobile devices'
+      imageAlt: 'Automated school parent communication and instant attendance alerts on WhatsApp'
     },
     {
       tag: 'DIRECT MESSAGING',
@@ -134,7 +147,7 @@ export default function Home() {
       solTitle: 'Direct Integration, Zero Markup',
       solDesc: "Connect your own WhatsApp Business account directly. Pay Meta's baseline rates with zero middleman commissions or extra markup.",
       image: '/assets/direct_whatsapp_messaging.png',
-      imageAlt: 'Direct WhatsApp integration with zero markup'
+      imageAlt: 'Direct WhatsApp Business integration for school fee reminders and notification broadcasts'
     },
     {
       tag: 'BLOATED SOFTWARE',
@@ -143,7 +156,7 @@ export default function Home() {
       solTitle: 'Essential Tools. Nothing Extra.',
       solDesc: 'Powerful dashboards, AI-powered commands, operational management, seamless data migration, and complete staff activity tracking—everything schools need, without unnecessary modules.',
       gif: '/assets/Stress.gif',
-      imageAlt: 'Why pay for features you wont use'
+      imageAlt: 'Streamlined school ERP interface eliminating unnecessary software bloat and complexity'
     },
     {
       tag: 'DATA MIGRATION CHALLENGE',
@@ -152,7 +165,7 @@ export default function Home() {
       solTitle: 'Simple, Guided Data Migration',
       solDesc: 'Import students, staff, subjects, and more through intuitive workflows built directly into the platform. No technical expertise required—just a seamless migration experience designed for school administrators.',
       image: '/assets/At work-cuate.png',
-      imageAlt: 'Why pay for features you wont use'
+      imageAlt: 'Fast and guided school data migration for student enrollment and staff records'
     }
   ];
 
@@ -178,8 +191,8 @@ export default function Home() {
       description: 'Complete data isolation with end-to-end HTTPS encryption, custom access roles, and continuous security audits.'
     },
     {
-      title: 'Web Based',
-      description: 'Alpine grow is a web-based platform. That means you can access it from any web browser without need to install anything separate.'
+      title: 'Student ID Card Studio',
+      description: 'Built-in template designer and batch print generator for student ID cards with custom branding, anti-fraud QR verification, and automated duplex mirroring.'
     },
     {
       title: 'PWA Teachers Portal',
@@ -311,7 +324,7 @@ export default function Home() {
               All-In-One Enterprise Platform
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight tracking-tight">
-              Modern School Management for Growing Institutions
+              AI-Powered School Management
             </h1>
             <p className="text-on-surface-variant text-lg md:text-xl max-w-xl font-medium leading-relaxed">
               Seamlessly manage admissions, academics, and fee collection with our cloud-based platform. Built for the next generation of educators and administrators.
@@ -351,7 +364,7 @@ export default function Home() {
               <img
                 className="w-full h-auto object-contain opacity-95 rounded-xl sm:rounded-2xl"
                 src="/assets/Mockup_hero.png"
-                alt="Modern interactive dashboard showcase representing administrative performance"
+                alt="Alpine Grow school management software admin dashboard showing attendance and fee metrics"
               />
 
               {/* Floating Glass Card 1 */}
@@ -431,7 +444,7 @@ export default function Home() {
             BRIDGING THE GAPS
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-            Simple. Focused. Built on Feedback.
+            Built to Solve Everyday School Administration Challenges
           </h2>
           <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
             No clutter. No hype. Just essential tools your school needs- continuously improved based on your feedback.
@@ -477,7 +490,7 @@ export default function Home() {
               DEDICATED TEACHERS PORTAL
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg leading-tight">
-              Empower Educators with an App-Like Experience
+              Dedicated Teacher Portal & Real-Time Attendance Tracking
             </h2>
             <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
               A dedicated mobile-first portal for teachers, designed to cut classroom admin down to seconds.
@@ -497,7 +510,7 @@ export default function Home() {
                 <img
                   className="w-full h-auto object-contain"
                   src="/assets/phone_mockup.png"
-                  alt="Teachers Portal interface representation"
+                  alt="Alpine Grow mobile PWA teacher portal for offline attendance marking and classroom tracking"
                 />
               </div>
 
@@ -594,7 +607,7 @@ export default function Home() {
               POWERFUL FEATURES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-              One Single Platform, Total Operational Control
+              Fee & Payroll Automation, Student ERP, and Campus Modules
             </h2>
             <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
               Say goodbye to juggling multiple separate tools. Explore the 10 core components engineered for modern, digital-first schools.
@@ -622,6 +635,310 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Student ID Studio Showcase */}
+      <section className="py-24 bg-gradient-to-tr from-slate-50 via-white to-cyan-50/30 border-y border-outline-variant/10 overflow-hidden" id="id-cards">
+        <div className="max-w-7xl mx-auto px-6 md:px-20">
+
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <span className="inline-block py-1 px-4 bg-primary/10 text-primary font-bold rounded-full text-xs mb-4 uppercase tracking-wider">
+              STUDENT CREDENTIALS STUDIO
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg leading-tight">
+              Instant Student ID Card Generation at Scale
+            </h2>
+            <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
+              Say goodbye to manual document formatting and expensive print vendors. Design institutional templates and batch-generate print-ready student ID cards in seconds—complete with automated duplex mirroring and anti-fraud QR codes.
+            </p>
+
+            {/* Interactive Toggle Switch */}
+            <div className="inline-flex p-1.5 bg-gray-100/90 rounded-2xl mt-8 border border-gray-200/80 shadow-inner">
+              <button
+                type="button"
+                onClick={() => setCardOrientation('vertical')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer ${
+                  cardOrientation === 'vertical'
+                    ? 'bg-white text-primary shadow-md scale-[1.02]'
+                    : 'text-on-surface-variant hover:text-on-surface'
+                }`}
+              >
+                <CreditCard className="w-4 h-4" />
+                Vertical Badge (Portrait)
+              </button>
+              <button
+                type="button"
+                onClick={() => setCardOrientation('horizontal')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer ${
+                  cardOrientation === 'horizontal'
+                    ? 'bg-white text-primary shadow-md scale-[1.02]'
+                    : 'text-on-surface-variant hover:text-on-surface'
+                }`}
+              >
+                <CreditCard className="w-4 h-4 rotate-90" />
+                Horizontal Card (Landscape)
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Left Column: Visual Card Preview with floating badges */}
+            <div className="relative flex justify-center items-center">
+              {/* Decorative background glow */}
+              <div className="absolute inset-4 rounded-3xl bg-gradient-to-tr from-cyan-400/10 via-primary/10 to-indigo-500/10 blur-2xl opacity-40 z-0" />
+
+              {/* Card Container */}
+              <div className="relative z-10 w-full max-w-[460px] flex justify-center">
+                {cardOrientation === 'vertical' ? (
+                  /* Vertical Student ID Card Mockup (CR80 Portrait) */
+                  <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden text-left transition-all duration-300 w-full max-w-[340px]">
+                    {/* Lanyard Hole Notch */}
+                    <div className="bg-slate-100 py-1.5 flex justify-center border-b border-slate-200">
+                      <div className="w-12 h-2.5 rounded-full bg-slate-300/80 border border-slate-400/40" />
+                    </div>
+
+                    {/* School Banner */}
+                    <div className="bg-gradient-to-r from-primary to-indigo-700 text-white p-4 text-center">
+                      <h4 className="font-extrabold text-sm tracking-wide uppercase">
+                        Dooars Public Academy
+                      </h4>
+                      <p className="text-[9px] text-white/80 font-medium">Student Identity Card (2025–26)</p>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-5 flex flex-col items-center text-center space-y-3">
+                      <div className="w-20 h-24 rounded-xl bg-slate-100 border-2 border-primary/30 flex flex-col items-center justify-center overflow-hidden shadow-sm relative">
+                        <Users className="w-9 h-9 text-slate-400" />
+                        <span className="absolute bottom-1 bg-emerald-500 text-white text-[7px] font-extrabold px-1.5 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm">
+                          <CheckCircle2 className="w-2 h-2" />
+                          VERIFIED
+                        </span>
+                      </div>
+                      <div>
+                        <h5 className="font-extrabold text-base text-on-surface">Aarav Sharma</h5>
+                        <p className="text-xs font-bold text-primary">Class 10 - Sec A</p>
+                      </div>
+
+                      <div className="w-full bg-slate-50 rounded-xl p-3 grid grid-cols-2 gap-2 text-left text-xs border border-slate-100">
+                        <div>
+                          <span className="text-[9px] text-slate-400 block uppercase font-medium">Roll No</span>
+                          <span className="font-bold text-slate-800">1024</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-400 block uppercase font-medium">Blood Group</span>
+                          <span className="font-bold text-red-600">O+</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-400 block uppercase font-medium">Adm No</span>
+                          <span className="font-mono text-[11px] font-bold text-slate-800">ADM-0892</span>
+                        </div>
+                        <div>
+                          <span className="text-[9px] text-slate-400 block uppercase font-medium">Emergency</span>
+                          <span className="font-mono text-[10px] font-bold text-slate-800">+91 98765-XXXXX</span>
+                        </div>
+                      </div>
+
+                      <div className="w-full flex items-center justify-between pt-2 border-t border-slate-100">
+                        <div className="w-9 h-9 bg-white rounded-lg p-0.5 border border-slate-200 text-slate-700">
+                          <QrCode className="w-full h-full" />
+                        </div>
+                        <div className="text-right">
+                          <span className="italic text-xs text-slate-800 block font-bold">K.S. Saxena</span>
+                          <span className="text-[8px] text-slate-400 uppercase font-medium">Principal Signature</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* Horizontal Student ID Card Mockup (CR80 Landscape) */
+                  <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden text-left transition-all duration-300 w-full max-w-[410px]">
+                    {/* School Header */}
+                    <div className="bg-gradient-to-r from-primary to-indigo-700 text-white px-5 py-3 flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-7 h-7 rounded-lg bg-white/15 flex items-center justify-center text-amber-300 text-xs font-black">
+                          DPA
+                        </div>
+                        <div>
+                          <h4 className="font-extrabold text-sm tracking-wide leading-tight uppercase">
+                            Dooars Public Academy
+                          </h4>
+                          <p className="text-[9px] text-white/75 font-medium leading-none">
+                            CBSE Affiliation No. 2130842 • Estd. 1998
+                          </p>
+                        </div>
+                      </div>
+                      <span className="text-[9px] bg-white/20 text-white font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                        2025–26
+                      </span>
+                    </div>
+
+                    {/* Card Body */}
+                    <div className="p-4 sm:p-5 flex gap-4 items-center">
+                      {/* Photo on left */}
+                      <div className="relative shrink-0 flex flex-col items-center">
+                        <div className="w-20 h-24 rounded-xl bg-slate-100 border-2 border-primary/30 flex flex-col items-center justify-center overflow-hidden shadow-sm relative">
+                          <Users className="w-8 h-8 text-slate-400 mb-1" />
+                          <span className="text-[8px] font-bold text-slate-400 uppercase">Student</span>
+                        </div>
+                        <span className="mt-1 text-[9px] font-mono font-bold text-primary">ADM-0892</span>
+                      </div>
+
+                      {/* Details in center */}
+                      <div className="flex-1 space-y-1.5 text-xs">
+                        <div>
+                          <span className="text-[9px] text-slate-400 block uppercase font-medium leading-none">Student Name</span>
+                          <span className="font-extrabold text-slate-900 text-sm">Aarav Sharma</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[11px] pt-1 border-t border-slate-100">
+                          <div>
+                            <span className="text-[9px] text-slate-400 block uppercase font-medium">Class & Sec</span>
+                            <span className="font-semibold text-slate-800">Class 10 - Sec A</span>
+                          </div>
+                          <div>
+                            <span className="text-[9px] text-slate-400 block uppercase font-medium">Roll No</span>
+                            <span className="font-mono font-bold text-primary">1024</span>
+                          </div>
+                          <div>
+                            <span className="text-[9px] text-slate-400 block uppercase font-medium">Blood Group</span>
+                            <span className="font-bold text-red-600">O+</span>
+                          </div>
+                          <div>
+                            <span className="text-[9px] text-slate-400 block uppercase font-medium">Emergency</span>
+                            <span className="font-mono text-[10px] font-semibold text-slate-800">+91 98765-XXXXX</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* QR and signature on right */}
+                      <div className="shrink-0 flex flex-col items-center justify-between border-l border-slate-100 pl-3 py-1 space-y-2">
+                        <div className="w-12 h-12 bg-slate-50 rounded-lg p-1 border border-slate-200 text-slate-700 flex items-center justify-center shadow-inner">
+                          <QrCode className="w-full h-full" />
+                        </div>
+                        <div className="text-center">
+                          <span className="italic text-[10px] text-slate-800 block font-bold leading-none">K.S. Saxena</span>
+                          <span className="text-[7px] text-slate-400 uppercase font-medium">Principal</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Floating pill 1: 300 DPI Print Ready */}
+                <div
+                  className="absolute -top-4 -left-3 sm:-left-6 glass-card p-2 sm:p-3 rounded-xl shadow-xl floating z-20"
+                  style={{ animationDelay: '1s' }}
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                      <Printer className="w-3.5 h-3.5" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-[10px] font-extrabold text-on-surface leading-tight">300 DPI Print Ready</p>
+                      <p className="text-[8px] text-on-surface-variant leading-tight">A4 Sheet & CR80 PVC</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating pill 2: Anti-Fraud QR */}
+                <div
+                  className="absolute -bottom-4 -right-3 sm:-right-6 glass-card p-2 sm:p-3 rounded-xl shadow-xl floating z-20"
+                  style={{ animationDelay: '3s' }}
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0">
+                      <QrCode className="w-3.5 h-3.5" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-[10px] font-extrabold text-on-surface leading-tight">Anti-Fraud Security</p>
+                      <p className="text-[8px] text-on-surface-variant leading-tight">Encrypted QR Verification</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 5 feature highlights */}
+            <div className="space-y-6 lg:pl-8">
+              {/* Feature 1 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    One-Click Classroom Batch Generation
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Filter by academic year, class, and section to generate student ID cards for entire cohorts in seconds with automated sequence sorting.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    6 Professional Layout Presets
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Select from Classic, Modern, Minimal, Academic, Badge Style, and Tech Grid templates. Customize school colors, crests, watermarks, and signatures.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                  <QrCode className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Encrypted QR & Barcode Security
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Embed dynamic QR codes and Code 128 barcodes to prevent identity counterfeiting and facilitate automated gate check-ins and library access.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                  <Printer className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    A4 Sheet Tiling & Standard CR80 PVC
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Automatically tile 8–10 cards per A4 page with precision cut lines for affordable desktop printing, or export standard CR80 PVC cards for card printers.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 5 */}
+              <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/80 hover:shadow-md transition-all duration-300 group border border-transparent hover:border-slate-100">
+                <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center flex-shrink-0 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-bold text-on-surface text-base group-hover:text-primary transition-colors">
+                    Duplex Mirroring & Instant PDF Download
+                  </h3>
+                  <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
+                    Smart reverse-column matching for double-sided printers ensures front and back cards line up perfectly. Export high-resolution PDFs with a single click.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Live Showcase Tab Component */}
       {/* <DashboardShowcase /> */}
 
@@ -633,7 +950,7 @@ export default function Home() {
               BENEFITS & OUTCOMES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-              Measurable Success for Your Institution
+              Measurable Operational Gains for Growing Schools
             </h2>
             <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
               See the exact operational and financial gains that schools experience when migrating to our platform.
@@ -670,7 +987,7 @@ export default function Home() {
               OUR DIFFERENTIATORS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg">
-              Engineered Differently from Legacy ERPs
+              Why Schools Choose Alpine Grow Over Legacy ERPs
             </h2>
             <p className="mt-4 text-on-surface-variant max-w-2xl mx-auto text-base">
               We focus on premium design, extreme reliability, and bulletproof user onboarding.
@@ -700,7 +1017,7 @@ export default function Home() {
               EDUCATORS' VOICE
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-on-surface font-headline-lg max-w-3xl mx-auto leading-tight">
-              We heard from educators to solve the real daily operations hassle
+              Trusted by Educators to Simplify Daily School Operations
             </h2>
           </div>
 
@@ -720,7 +1037,7 @@ export default function Home() {
                 <img
                   className="w-12 h-12 rounded-full object-cover"
                   src="/assets/avatar_shalini_sharma.png"
-                  alt="Educator Shalini Sharma"
+                  alt="Mrs. Shalini Sharma, High School Coordinator at Sanskriti Academy"
                 />
                 <div className="text-left">
                   <p className="font-bold text-on-surface text-sm">Mrs. Shalini Sharma</p>
@@ -743,7 +1060,7 @@ export default function Home() {
                 <img
                   className="w-12 h-12 rounded-full object-cover"
                   src="/assets/avatar_rajesh_kumar.png"
-                  alt="Educator Rajesh Kumar"
+                  alt="Mr. Rajesh Kumar, Science Teacher at Shanti Vidya Mandir"
                 />
                 <div className="text-left">
                   <p className="font-bold text-on-surface text-sm">Mr. Rajesh Kumar</p>
@@ -766,7 +1083,7 @@ export default function Home() {
                 <img
                   className="w-12 h-12 rounded-full object-cover"
                   src="/assets/avatar_meenakshi_iyer.png"
-                  alt="Educator Meenakshi Iyer"
+                  alt="Mrs. Meenakshi Iyer, Primary Section Lead at Little Flower School"
                 />
                 <div className="text-left">
                   <p className="font-bold text-on-surface text-sm">Mrs. Meenakshi Iyer</p>
@@ -883,6 +1200,7 @@ export default function Home() {
                 {/* Hiding Pricing & Plans temporarily */}
                 {/* <li><a href="/pricing" className="hover:text-primary transition-colors">Pricing & Plans</a></li> */}
                 <li><a href="#features" className="hover:text-primary transition-colors">Key Modules</a></li>
+                <li><a href="#id-cards" className="hover:text-primary transition-colors">Student ID Card Studio</a></li>
                 <li><a href="/terms" className="hover:text-primary transition-colors">Terms of Service</a></li>
               </ul>
             </div>

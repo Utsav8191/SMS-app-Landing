@@ -21,20 +21,22 @@ function FAQItem({ question, answer }: FAQItemProps) {
 
   return (
     <div className="border-b border-gray-200/80 py-4 last:border-b-0">
-      <button
-        type="button"
-        onClick={handleToggle}
-        className="flex w-full justify-between items-center py-4 text-left font-bold text-lg text-on-surface hover:text-primary transition-colors focus:outline-none"
-      >
-        <span>{question}</span>
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="text-gray-400"
+      <h3 className="font-bold text-lg text-on-surface">
+        <button
+          type="button"
+          onClick={handleToggle}
+          className="flex w-full justify-between items-center py-4 text-left font-bold text-lg text-on-surface hover:text-primary transition-colors focus:outline-none"
         >
-          <ChevronDown className="w-5 h-5" />
-        </motion.div>
-      </button>
+          <span>{question}</span>
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+            className="text-gray-400"
+          >
+            <ChevronDown className="w-5 h-5" />
+          </motion.div>
+        </button>
+      </h3>
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
@@ -79,6 +81,10 @@ export default function FAQ() {
     {
       question: 'Can the system accommodate multiple school branches or campuses?',
       answer: 'Currently, multi-tenant setup for multiple branches or campuses is not supported. However, support for managing multiple campus locations under a unified account is planned for future updates.'
+    },
+    {
+      question: 'Can we generate student ID cards in bulk?',
+      answer: 'Yes! Alpine Grow includes a built-in Student ID Card Studio. Administrators can select from multiple professional templates, customize school branding and signatures, and batch-generate print-ready ID cards for entire classes. The system includes anti-fraud QR verification, automated A4 sheet tiling (8–10 cards per page with crop marks), duplex printing support, and instant PDF download.'
     }
   ];
 
